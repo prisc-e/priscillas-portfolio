@@ -1,0 +1,233 @@
+/*Priscilla Egli
+  Stylesheet for Challenge 2*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    background-color: darkgray;
+    font-family: Helvetica, Arial, sans-serif;
+}
+main {
+    margin: 20px;
+    padding: 5px;
+  }
+
+header {
+    padding: 5px 20px 5px 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header .logo-img {
+    padding: 0;
+    margin-left: 5px;
+    border: darkgray;
+    border-width: 3px;
+    border-style: ridge;
+    justify-content: left;
+    
+}
+header nav {
+    margin: 7px 0;
+  }
+header nav ul {
+    padding-right: 8px;
+    list-style: none;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+}
+header nav ul li {
+    justify-content: space-around;
+    margin: 10px 15px 10px 15px;
+    font-size: 22px;
+}
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+.about-me {
+    display: flex;
+    background-color: darkcyan;
+    width: 90%;
+    margin: 15px;
+    padding-right: 10px;
+    justify-content: right;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.about-me img{
+    height: 400px;
+    padding: 15px;
+
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+section {
+    padding: 10px;
+}
+h2 {
+    padding: 10px;
+    font-weight: bolder;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: xx-large;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: left;
+}
+.section-title {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 10px;
+    background-color: black;
+  }
+.section-title nav ul {
+    flex-direction: row;
+    margin: 20px;
+
+  }
+.section-title nav ul li {
+    
+    padding: 8px;
+    list-style: none;  
+    flex-direction: row;
+}
+.section-title nav ul li a {
+    color:cyan;
+}
+.project-piece {
+    background-color: darkcyan;
+    width: 90%;
+    margin: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.project-piece img {
+    height: 400px;
+    padding: 20px;
+    justify-content: right;
+    flex-direction: row;
+} 
+#run-buddy img {
+    height: 550px;
+}
+.project-piece img:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+}
+h3 {
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    font-size: x-large;
+}
+.contact-info address {
+    color: white;
+    text-align: left;
+    font-size: large;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+}
+
+footer {
+    padding: 30px 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 850px) {
+    section {
+      padding: 10px 10px;
+    }
+   
+   
+    .about-me img {
+        height: 280px;
+        flex: 1 20% 0;
+    }
+    .project-piece {
+        padding: 5px;
+        margin-left: 10px;
+        
+    }
+    .project-piece img {
+      flex: 0 10% 0;
+      height: 230px;
+      padding: 5px;
+      margin-top: 10px 0;
+    }
+    #run-buddy img {
+        height: 300px;
+        padding:3px;
+    }
+    p {
+      flex: 100%;  
+    }
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    #run-buddy img {
+        height: 230px;
+        padding: 10px;
+    }
+    .section-title {
+      width: 95%;
+    }
+    h3 {
+        flex: 2 100%;
+        text-align: center;
+      }
+   /*
+    .about-me, .project-piece {
+        flex-wrap: wrap;
+        flex-flow: column;
+        justify-content: space-around;
+    }
+    */
+    .contact-info > * {
+      flex: 0 90%;
+    }
+  
+  }
