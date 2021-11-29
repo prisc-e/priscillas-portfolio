@@ -1,0 +1,27 @@
+{
+  "name": "project-1-cocktail-app",
+  "version": "1.0.0",
+  "description": "# Your project should fulfill the following requirements:",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build ./assets/css/style.css -o tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beggsaj/project-1-cocktail-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beggsaj/project-1-cocktail-app/issues"
+  },
+  "homepage": "https://github.com/beggsaj/project-1-cocktail-app#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {
+    "stylelint-config-recommended": "^6.0.0"
+  }
+  
+}

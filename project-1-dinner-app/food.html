@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='./assets/css/style.css'>
+    <link href="tailwind.css" rel="stylesheet">
+    <title>Food</title>
+</head>
+<body class="bg-yellow-100">
+    <header>
+      <h2 class="p-10 bg-gradient-to-r from-yellow-700 via-yellow-200 to-yellow-700 flex place-content-start md:justify-center text-6xl font-semibold">Meal Selector</h2>
+      <!--Navigation-->
+      <div>
+        <nav class="bg-yellow-400">
+            <ul class="group justify-center grid grid-flow-col auto-cols-max md:auto-cols-min">
+                <li class="pr-6 md:px-8 text-gray-700 font-bold group-hover:text-gray-900 hover:underline">
+                    <a href="index.html">
+                        <span>Home</span>
+                        </a>
+                </li>
+                <li class="px-6 md:px-8 text-gray-700 font-bold group-hover:text-gray-900 hover:underline">
+                    <a href="./drink.html">
+                    <span>Drinks</span>
+                    </a>
+                </li>
+                <li class="px-6 md:px-8 text-gray-700 font-bold group-hover:text-gray-900 hover:underline">
+                    <a href="./food.html">
+                        <span>Food</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    
+    <main>
+      <div class="p-8 flex-wrap">
+      <div class="flex grid col-span-1 md:col-span-4 gap-4 justify-center">
+      <!--random meal card-->
+      <div class="p-4 row-span-1 col-start-1 max-w-sm mx-auto bg-white rounded-xl shadow-md flex space-x-4">
+        <div class="flex-wrap">   
+          <h2 class="font-bold">Random Meal</h2>
+              <p>If you would like a random meal to be chosen for you, press "Get Meal"</p>
+        </div>
+          <div class="p-2">
+              <button id="mealBtn" class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-2 focus:ring-yellow-500">
+                Get Meal</button>
+          </div>
+      </div>
+        <!--start ingredient search card-->
+     
+      <div class="p-4 row-span-1 col-start-1 row-span-1 md:row-start-2 max-w-sm mx-auto bg-white rounded-xl shadow-md flex space-x-4"> 
+          <h2 class="flex-wrap font-bold">Search By Ingredient:</h2>
+              <div id="language-buttons" class="p-2"><!--was "class= card-body"-->
+                <div class="p-2">
+                  <select class="bg-gray-200 border-1 border-black-400 p-1" id="foodChoice">
+                    <option id='input' value="">-- Ingredients --</option>
+                    <option id='input' value="Beef">Beef</option>
+                    <option id='input' value="Chicken">Chicken</option>
+                    <option id='input' value="Dessert">Dessert</option>
+                    <option id='input' value="Pork">Pork</option>
+                    <option id='input' value="Seafood">Seafood</option>
+                    <option id='input' value="Side">Side</option>
+                    <option id='input' value="Vegan">Vegan</option>
+                    <option id='input' value="Vegetarian">Vegetarian</option>
+                    <option id='input' value="Breakfast">Breakfast</option>
+                  </select>
+                <div class="p-2">
+                  <button id="searchButton" class="p-3 content-end font-semibold rounded-lg shadow-md text-white bg-yellow-700 hover:bg-yellow-800 align-bottom focus:ring-2 focus:ring-yellow-500">
+                    Submit</button>
+                </div>
+              </div>
+            </div>
+      </div>
+      <!--end card-->
+        
+      <!--ingredients/directions list card-->
+      <div class=" p-4 col-span-1 row-span-1 md:col-start-2 md:col-end-5 md:row-start-1 md:row-end-4 min-w-full max-w-sm mx-auto bg-white rounded-xl shadow-md flex space-evenly space-x-4">
+          <h2 class="font-bold">
+            Meal Recipe: <span id="recipe-results" class="list-inside"></span>
+          </h2>
+             
+          <div id="recipe-containerM" class="list-group">
+              <div class="py-3 ">
+              <button id="saveMealBtn" class="p-3 font-semibold rounded-lg shadow-md text-white bg-yellow-700 hover:bg-yellow-800 align-bottom focus:ring-2 focus:ring-yellow-500">
+                        Save</button>
+              <button id="clearMealBtn" class="p-3 font-semibold rounded-lg shadow-md text-white bg-red-700 hover:bg-red-800 focus:ring-2 focus:ring-yellow-500">
+                        Clear Selection</button>
+              </div>   
+            <div id="meals"></div>
+          </div>
+                
+              
+          
+      </div>
+
+    <!--end grid row div-->
+    </div>
+    </div>
+    </main>
+    <script src="./assets/js/food.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* overall styling for begins */
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: font-family: Helvetica, Arial, sans-serif;
+}
